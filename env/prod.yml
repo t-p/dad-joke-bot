@@ -1,0 +1,6 @@
+consumer:
+  api_key: fill me in
+  api_secret: fill me in
+access:
+  token: fill me in
+  token_secret: fill me in

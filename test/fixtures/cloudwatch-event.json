@@ -1,0 +1,11 @@
+{
+  "version": "0",
+  "id": "960b208f-e721-3189-db83-74f687897dc8",
+  "detail-type": "Scheduled Event",
+  "source": "aws.events",
+  "account": "302370538844",
+  "time": "2018-10-05T08:43:45Z",
+  "region": "eu-west-1",
+  "resources": ["blub"],
+  "detail": {}
+}

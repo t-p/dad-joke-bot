@@ -1,0 +1,18 @@
+{
+  "name": "i-can-haz-dad-joke",
+  "version": "1.0.0",
+  "description": "Lambda function to tweet dad jokes #NoServerNovember ",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Pfeiffer",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-boost": "^0.1.20",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "node-fetch": "^2.2.1",
+    "twitter": "^1.7.1"
+  }
+}

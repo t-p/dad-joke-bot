@@ -1,0 +1,26 @@
+service: iCanHazDadJoke
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-west-1
+  stage: ${opt:stage, self:custom.defaultStage}
+
+package:
+  exclude:
+    - test/**
+
+custom:
+  defaultStage: prod
+  env: ${file(./env/${self:provider.stage}.yml)}
+
+functions:
+  joke:
+    handler: handler.joke
+    events:
+      - schedule: rate(24 hours)
+    environment:
+      CONSUMER_KEY: ${self:custom.env.consumer.api_key}
+      CONSUMER_SECRET: ${self:custom.env.consumer.api_secret}
+      ACCESS_TOKEN: ${self:custom.env.access.token}
+      ACCESS_TOKEN_SECRET: ${self:custom.env.access.token_secret}
